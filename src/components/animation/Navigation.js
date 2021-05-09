@@ -2,11 +2,11 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import  MenuLinks  from "../MenuLinks";
 import SignInButton from "../SignInButton";
-//import SignUpButton from "../SignUpButton";
+import SignUpButton from "../SignUpButton";
 import FindPorkJoint from "../FindPorkJoint";
-//import { useSelector } from "react-redux";
-//import { selectUser } from "./features/userSlice";
-//import LogoutButton from "../LogoutButton";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/userSlice";
+import LogoutButton from "../LogoutButton";
 
 const variants = {
   open: {
@@ -102,7 +102,7 @@ export const Navigation = ({ toggle }) => {
             )}
           </motion.div>
           <motion.div variants={variants2}>
-            <FindAStore />
+            <FindPorkJoint />
           </motion.div>
         </motion.ul>
       )}
